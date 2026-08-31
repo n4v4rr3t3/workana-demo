@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0d0e12">
+  <title>NOVA — Panel de redirecciones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark">N</span><span>NOVA</span></a>
+    <nav>
+      <a class="nav-item active" href="#"><span>◫</span> Resumen</a>
+      <a class="nav-item" href="#campaign"><span>↗</span> Redirecciones</a>
+      <a class="nav-item" href="#analytics"><span>⌁</span> Analítica</a>
+    </nav>
+    <a class="view-site" href="index.html">Ver landing <span>↗</span></a>
+  </aside>
+
+  <main class="dashboard">
+    <header class="dash-header">
+      <div><p class="eyebrow">PANEL DE CONTROL</p><h1>Resumen de campaña</h1></div>
+      <span class="secure-pill"><span class="status-dot"></span> Sistema operativo</span>
+    </header>
+
+    <section id="analytics" class="stats-grid">
+      <article class="stat-card"><span>Visitas totales</span><strong id="stat-visits">1.284</strong><small>↑ 12,4% esta semana</small></article>
+      <article class="stat-card"><span>Confirmaciones +18</span><strong id="stat-clicks">976</strong><small>Usuarios redirigidos</small></article>
+      <article class="stat-card"><span>Conversión</span><strong id="stat-rate">76,0%</strong><small>Visita → destino</small></article>
+      <article class="stat-card"><span>Dominios activos</span><strong>1</strong><small>Preparado para escalar</small></article>
+    </section>
+
+    <section id="campaign" class="panel-card">
+      <div class="panel-heading">
+        <div><h2>Destino de la campaña</h2><p>Cambiá la URL final sin tocar el código ni volver a publicar la web.</p></div>
+        <label class="switch-label"><span id="switch-text">Activa</span><input id="campaign-active" type="checkbox" checked><span class="switch"></span></label>
+      </div>
+
+      <form id="redirect-form">
+        <label>Dominio de entrada<input value="nombredelamarca.com" disabled></label>
+        <label>URL de destino<input id="destination-url" type="url" value="destino.html" required></label>
+        <div class="form-actions">
+          <button class="secondary-btn" type="button" id="test-btn">Probar redirección ↗</button>
+          <button class="primary-btn compact" type="submit">Guardar cambios</button>
+        </div>
+      </form>
+      <div id="save-toast" class="toast" role="status">✓ Configuración guardada correctamente</div>
+    </section>
+
+    <section class="panel-card activity-card">
+      <div class="panel-heading"><div><h2>Actividad reciente</h2><p>Últimas confirmaciones registradas.</p></div><span class="live-label"><span class="status-dot"></span> En vivo</span></div>
+      <div class="activity-row"><span class="activity-icon">↗</span><div><strong>Redirección completada</strong><small>Mobile · Buenos Aires</small></div><time>Hace 2 min</time></div>
+      <div class="activity-row"><span class="activity-icon">↗</span><div><strong>Redirección completada</strong><small>Mobile · Córdoba</small></div><time>Hace 8 min</time></div>
+      <div class="activity-row"><span class="activity-icon">↗</span><div><strong>Redirección completada</strong><small>Desktop · Rosario</small></div><time>Hace 14 min</time></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
